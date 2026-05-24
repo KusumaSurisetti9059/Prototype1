@@ -1,0 +1,59 @@
+<html>
+<head><title> Hello </title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body align="center" bor="yes">
+    <script>
+        let finished=false;
+
+        function calc(value){
+            if(finished){
+                bar.value="";
+                finished=false;
+            }
+            bar.value+=value;
+        }
+        function res(){
+            bar.value = eval(bar.value);
+            finished=true;
+        }
+        function cr(){
+            bar.value="";
+        }
+        function bs(){
+            bar.value=bar.value.slice(0,-1);
+        }
+    </script>
+    <h1 color="white" > Calculator</h1>
+    <div>
+    <label padding="50px" ><input type="text" id="bar" style="text-align:right"   readonly> </label>
+    
+    <br><br>
+    <input type="button" align="left" value="C" width="70px" onclick="cr()" > 
+    <input type="button" value="X" onclick="bs()" > 
+   
+    <input type="button" value="=" onclick="res()" > <br><br>
+    <input type="button" value="9" onclick="calc(this.value)" > 
+    <input type="button" value="8" onclick="calc(this.value)" > 
+    <input type="button" value="7" onclick="calc(this.value)" > 
+    <input type="button" value="/" onclick="calc(this.value)"> <br><br>
+    <input type="button" value="6" onclick="calc(this.value)"> 
+    <input type="button" value="5" onclick="calc(this.value)" > 
+    <input type="button" value="4" onclick="calc(this.value)">
+    <input type="button" value="*" onclick="calc(this.value)" >  <br><br>
+    <input type="button" value="3" onclick="calc(this.value)" > 
+    <input type="button" value="2" onclick="calc(this.value)" > 
+    <input type="button" value="1" onclick="calc(this.value)"  > 
+    <input type="button" value="+" onclick="calc(this.value)"> <br><br>
+    <input type="button" value="00" onclick="calc(this.value)" > 
+    <input type="button" value="0" onclick="calc(this.value)" > 
+    <input type="button" value="." onclick="calc(this.value)" > 
+    <input type="button" value="-" onclick="calc(this.value)"> 
+    <br>
+    </div>
+    <div>
+    <p align="right"> ~designed by KusumaSurisetti</p>
+    </div>
+</body>
+</html>
+
